@@ -1,0 +1,467 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins.scss";
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+@font-face {
+	font-family: "AkzidenzGroteskBQCondensedBold";
+	src: url("../fonts/AkzidenzGroteskBQCondensedBold.eot");
+	src: local("☺"), url("../fonts/AkzidenzGroteskBQCondensedBold.woff") format("woff"),
+		url("../fonts/AkzidenzGroteskBQCondensedBold.ttf") format("truetype"),
+		url("../fonts/AkzidenzGroteskBQCondensedBold.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Bebas";
+	src: url("../fonts/BebasNeueRegular.eot");
+	src: local("☺"), url("../fonts/BebasNeueRegular.woff") format("woff"),
+		url("../fonts/BebasNeueRegular.ttf") format("truetype"), url("../fonts/BebasNeueRegular.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+//</Подключаем шрифты>=======================================================================================
+
+//<Иконочные шрифты>==========================================================================================
+
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontfamily: "PT Sans";
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minwidth: 320px;
+$mw: 880;
+$md1: $mw + 12;
+$md2: 767.98;
+$md3: 767.98;
+$md4: 479.98;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null.scss";
+body {
+	color: #000;
+	font-size: 14px;
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	&.loaded {
+	}
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+	max-width: $mw + px;
+	margin: 0 auto;
+	width: 100%;
+
+	@media (max-width: $md1+px) {
+		max-width: 750px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+@import "forms.scss";
+@import "ui.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+//@import "../../js/fancybox/jquery.fancybox.scss";
+//@import "datepicker.scss";
+//@import "fontawesome.scss";
+//@import "popover.min.scss";
+//@import "baguetteBox.scss";
+//@import "pagging.scss";
+//@import "icons.scss";
+@import "popup.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "home.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+
+.private {
+	@include flexbox();
+	background-color: #000;
+	margin: 0px 0px 75px 0px;
+	@media (max-width: $md2+px) {
+		margin: 0px 0px 40px 0px;
+	}
+}
+.private__column {
+	flex: 0 0 50%;
+	@media (max-width: $md2+px) {
+		flex: 1 1 100%;
+		&:first-child {
+			display: none;
+		}
+	}
+}
+.private__image {
+	height: 100%;
+}
+.private__body {
+	padding: 75px 0px 75px 60px;
+	@media (max-width: $md1+px) {
+		padding: 30px 20px 30px 30px;
+	}
+}
+.private-body-content {
+	max-width: 305px;
+}
+
+.private-body__title {
+	font-family: "AkzidenzGroteskBQCondensedBold";
+	font-size: 50px;
+	line-height: 50px;
+	color: #fff;
+	text-transform: uppercase;
+	margin: 0px 0px 30px 0px;
+	@media (max-width: $md1+px) {
+		font-size: 35px;
+		margin: 0px 0px 20px 0px;
+	}
+}
+.private-body__text {
+	font-size: 15px;
+	line-height: 25px;
+	color: #ffffff;
+	margin: 0px 0px 50px 0px;
+	@media (max-width: $md1+px) {
+		margin: 0px 0px 30px 0px;
+	}
+}
+.private-body__buttons {
+	@include flexbox();
+	align-items: center;
+}
+.private-body-buttons__item {
+}
+.private-body-buttons__link {
+	font-family: "Bebas";
+	font-size: 15px;
+	line-height: 25px;
+	color: #fff;
+	text-decoration: underline;
+	margin: 0px 0px 0px 15px;
+	letter-spacing: 1.5px;
+}
+
+//====================================================================================================
+
+.products {
+	margin: 0px 0px 40px 0px;
+	@media (max-width: $md2+px) {
+		margin: 0;
+	}
+}
+
+.products-body {
+	@include flexbox();
+	@media (max-width: $md2+px) {
+		flex-wrap: wrap;
+	}
+}
+.products__column {
+	flex: 0 0 25%;
+	margin: 0px 0px 40px 0px;
+	@media (max-width: $md2+px) {
+		flex: 0 0 50%;
+	}
+	@media (max-width: 380px) {
+		flex: 1 1 100%;
+	}
+}
+.products-item {
+	@include flexbox();
+	flex-direction: column;
+	height: 100%;
+}
+.products-item__image {
+	display: block;
+	padding: 0px 0px 100% 0px;
+	margin: 0px 0px 25px 0px;
+	@media (max-width: 380px) {
+		margin: 0px 0px 15px 0px;
+	}
+}
+.products-item__title {
+	display: block;
+	height: 50px;
+	overflow: hidden;
+	font-family: "AkzidenzGroteskBQCondensedBold";
+	font-size: 25px;
+	line-height: 25px;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: #000000;
+	margin: 0px 0px 30px 0px;
+	padding: 0px 10px 0px 0px;
+	max-width: 175px;
+	@media (max-width: 380px) {
+		max-width: none;
+		height: auto;
+		overflow: visible;
+		margin: 0px 0px 20px 0px;
+	}
+}
+.products-item__text {
+	font-size: 15px;
+	line-height: 25px;
+	color: #000000;
+	margin: 0px 0px 25px 0px;
+	max-width: 185px;
+	padding: 0px 10px 0px 0px;
+	flex: 1 1 auto;
+	@media (max-width: 380px) {
+		max-width: none;
+		margin: 0px 0px 15px 0px;
+	}
+}
+.products-item__btn {
+	margin: 0px 0px 29px 0px;
+}
+.products-item__link {
+	font-family: "Bebas";
+	font-size: 15px;
+	line-height: 25px;
+	text-decoration: underline;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: #000000;
+}
+
+//====================================================================================================
+
+.why {
+}
+.why-top {
+	@include flexbox();
+	background-color: #000;
+}
+.why-top__column {
+	flex: 0 0 50%;
+	@media (max-width: $md1+px) {
+		flex: 1 1 100%;
+		&:last-child {
+			display: none;
+		}
+	}
+}
+.why-top__text {
+	text-align-last: right;
+	font-family: "AkzidenzGroteskBQCondensedBold";
+	font-size: 50px;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: #ffffff;
+	padding: 50px 60px 50px 0px;
+	@media (max-width: $md1+px) {
+		padding: 30px 0px;
+		text-align-last: center;
+		font-size: 40px;
+	}
+	@media (max-width: $md2+px) {
+		padding: 20px 0px;
+		text-align-last: center;
+		font-size: 30px;
+	}
+}
+.why-top__image {
+	height: 100%;
+}
+.why-body {
+	background-color: #ebebeb;
+	padding: 50px 0px 0px 0px;
+	@media (max-width: $md4+px) {
+		padding: 30px 0px 0px 0px;
+	}
+}
+.why-body-row {
+	@include flexbox();
+	flex-wrap: wrap;
+}
+.why-body__column {
+	flex: 0 1 50%;
+	margin: 0px 0px 50px 0px;
+	@media (max-width: $md1+px) {
+		flex: 1 1 100%;
+	}
+	@media (max-width: $md4+px) {
+		margin: 0px 0px 30px 0px;
+	}
+}
+.why-body-item {
+	@include flexbox();
+}
+.why-body-item__icon {
+	flex: 0 0 100px;
+	height: 100px;
+	background-color: #000000;
+	@include flexbox();
+	justify-content: center;
+	align-items: center;
+	@media (max-width: $md4+px) {
+		flex: 0 0 80px;
+		height: 80px;
+		img {
+			max-width: 100%;
+		}
+		padding: 15px;
+	}
+}
+.why-body-item-body {
+	flex: 1 1 100%;
+	padding: 0px 0px 0px 11px;
+	@include flexbox();
+	flex-direction: column;
+}
+.why-body-item-body__title {
+	font-family: "AkzidenzGroteskBQCondensedBold";
+	font-size: 25px;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	flex: 1 1 auto;
+	@media (max-width: $md4+px) {
+		font-size: 20px;
+	}
+}
+.why-body-item-body__text {
+	font-size: 15px;
+	line-height: 25px;
+	padding: 0px 15px 0px 0px;
+}
+
+//====================================================================================================
+
+.contacts {
+padding: 80px 0px 0px 0px;
+@media (max-width:$md2+px){
+	padding: 30px 0px 0px 0px;
+
+}
+}
+.contacts-top {
+}
+.container {
+}
+.contacts__title {
+	font-family: "AkzidenzGroteskBQCondensedBold";
+font-size: 50px;
+line-height: 25px;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+margin: 0px 0px 30px 0px;
+}
+.contacts-body {
+	@include flexbox();
+	flex-wrap: wrap;
+}
+.contacts-body__column {
+	flex: 0 0 50%;
+	margin: 0px 0px 20px 0px;
+	@media (max-width:$md2+px){
+		flex: 1 1 100%;
+	}
+}
+.contacts-body__item {
+font-size: 15px;
+line-height: 27px;
+color: #000;
+display: inline-block;
+padding: 0px 0px 0px 35px;
+}
+.contacts-body__item--1 {
+	background: url('../../img/contacts/01.svg') 0 0 no-repeat;
+}
+.contacts-body__item--2 {
+	background: url('../../img/contacts/02.svg') 0 0 no-repeat;
+}
+.contacts-body__item--3 {
+	background: url('../../img/contacts/03.svg') 0 0 no-repeat;
+}
+.contacts-social {
+	@include flexbox();
+}
+.contacts-social__item {
+	margin: 0px 30px 0px 0px;
+	&:last-child{margin:0px 0px 0px 0px;}
+}
+
+.contacts-content {
+	@include flexbox();
+	background-color: #000;
+	@media (max-width:$md2+px){
+		  display: block;
+	}
+}
+.contacts-content__column {
+	flex: 0 0 50%;
+}
+.contacts-content__map {
+	height: 100%;
+	@media (max-width:$md2+px){
+		  height: 300px;
+	}
+}
+.contacts-content-form {
+	padding: 55px 60px;
+	@media (max-width:$md2+px){
+		padding: 30px;
+	}
+}
+.contacts-content-form__title {
+	font-family: 'AkzidenzGroteskBQCondensedBold';
+	font-size: 25px;
+	line-height: 25px;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	margin: 0px 0px 30px 0px;
+	color: #fff;
+}
+.contacts-content-form-body {
+	max-width: 375px;
+	@media (max-width:$md2+px){
+		max-width: none;
+
+	}
+}
+.contacts-content-form-line {
+	margin: 0px 0px 25px 0px;
+}
+.contacts-content-form-button {
+}
+.contacts-content-form__btn {
+}
+
+
+//====================================================================================================
+
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================

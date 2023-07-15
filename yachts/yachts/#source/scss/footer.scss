@@ -1,0 +1,127 @@
+.footer {
+    color: #fff;
+    background-color: #075F68;
+    padding: 47px 0px 57.5px 0px;
+    &__row {
+       display: flex;
+       flex-wrap: wrap;
+    }
+
+    &__column {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 690px;
+        margin-left: auto;
+        &:first-child{
+                margin: 0;
+              flex: 0 0 390px;
+        }
+    }
+}
+
+.footer-logo {
+
+    &__img {
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+
+    &__text {
+        font-size: 15px;
+        line-height: 20px;
+        margin: 12px 0px 0px 0px;
+        text-align: center;
+
+    }
+}
+.footer-number {
+    margin: 38px 0px 0px 0px;
+    max-width: 309px;
+    margin-right: auto;
+    font-weight: 500;
+    line-height: 21px;
+
+}
+.footer-copyright {
+    flex: 1 1 100%;
+    margin: 18px 0px 0px 0px;
+    font-size: 12px;
+line-height: 16px;
+}
+.footer-links {
+    padding: 0px 0px 0px 35px;
+    display: flex;
+    width: 100%;
+    margin: 20px 0px 58px 0px;
+    align-items: center;
+    &__link {
+        &::before{
+            position: absolute;
+            width:25px;
+        }
+        position: relative;
+        font-size: 19px;
+        font-weight: 500;
+       text-decoration: underline;
+        a{
+            &::before{
+                position: absolute;
+                width:25px;
+            }
+            color: #fff;
+        }
+    }
+    &__main {
+        
+    }
+    &__about {
+    }
+    &__yachts {
+    }
+    &__contact {
+    }
+    &__call {
+    }
+}
+
+
+.footer-payment {
+    flex: 0 0 400px;
+    display: flex;
+    justify-content: space-between;
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.footer-social {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -25px 0px 0px 100px;
+    flex: 0 0 98px;
+    p{
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+line-height: 20px;
+    }
+
+    &__item {
+        margin: 9px 0px 0px 0px;
+        max-height: 37px;
+        text-align: center;
+        img{
+            height: 100%;
+        }
+    }
+}
+
+//====================================================================================================
+
+
+
+//====================================================================================================
+

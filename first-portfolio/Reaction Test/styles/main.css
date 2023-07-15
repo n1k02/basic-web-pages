@@ -1,0 +1,160 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: content-box;
+}
+
+html,body {
+    width: 100%;
+    height: 120vh;
+    margin: 0;
+    padding: 0;
+    background-color: #14171A;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 8%;
+    background-color: #0C1013;
+    display: flex;
+    justify-content: center;
+    min-height: 50px;
+}
+
+.header__title {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__title p {
+    color: rgb(0, 255, 0);
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: xxx-large;
+    display: inline;
+ 
+}
+
+.content {
+    width: 100%;
+    height: 70%;
+
+}
+.content__records {
+    width: 100%;
+    height: 40%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.content__records__window {
+    width: 70%;
+    height: 100%;
+    border: #000 solid;
+    background-color: #222;
+}
+
+.records-list {
+    font-size: x-large;
+    margin-left: 20px;
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    font-family: 'consolas';
+    overflow: auto;
+}
+
+
+.content__tester {
+    width: 100%;
+    height: 60%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.tester__window {
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: crosshair;
+}
+
+.tester__window__text {
+    font-weight: 700;
+    color: orange;
+    font-size: xxx-large;
+    letter-spacing: 10px;
+    font-family: Consolas;
+}
+
+.footer {
+    width: 100%;
+    height: 20%;
+    margin-top: 5%;
+    background-color:#0C1013 ;
+}
+
+/*  Texts  */
+.wait-text {
+    font-weight: 800;
+    color: black;
+    font-size: xxx-large;
+    letter-spacing: 4px;
+    font-family: Consolas;
+}
+
+.click-text {
+    font-weight: 800;
+    color: black;
+    font-size: xxx-large;
+    letter-spacing: 4px;
+    font-family: Consolas;
+}
+
+.result-text {
+    font-weight: 800;
+    color: black;
+    font-size: xxx-large;
+    letter-spacing: 4px;
+    font-family: Consolas;
+}
+
+
+@media (max-width: 480px) {
+    .tester__window__text {
+        font-size: xx-large;
+        
+    }
+    .wait-text{
+        font-size: xx-large;
+    }
+    html, body{
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 340px) {
+    .header__title p {
+        font-size: xx-large;
+    }
+    .tester__window__text {
+        font-size: x-large;
+        letter-spacing: 3px;
+    }
+    .click-text{
+        font-size: xx-large;
+    }
+}
+

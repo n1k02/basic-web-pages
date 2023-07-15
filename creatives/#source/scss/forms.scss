@@ -1,0 +1,48 @@
+//<FORM (a.f+tab)>====================================================================================================
+.form{}
+.form-row{@include flexbox();margin: 0px -15px;}
+.form__column{padding: 0px 15px;}
+.form-input{}
+.form-button{}
+//</FORM>====================================================================================================
+
+//<BUTTONS (a.btn+tab)>====================================================================================================
+.btn{
+	display: inline-block;
+	padding: 0px 0px;
+	margin: 45px 0px 0px 0px;
+	background-color: #11749e;
+	text-transform: uppercase;
+	font-weight:500;
+	color: #fff;
+	text-align: center;
+	@include adaptiv-value("width",227 ,150 , 1);
+	@include adaptiv-value("height", 64, 45, 1);
+	@include adaptiv-value("font-size",24 ,18 ,1 );
+	&:hover{}
+	&.fw{width: 100%;}
+}
+//</BUTTONS>====================================================================================================
+
+//<INPUT (inp+tab)>====================================================================================================
+input[type=text],input[type=email],input[type=tel],textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;
+	background-color: rgba(0, 0, 0, 0);
+	border:1px solid #fff;
+	color: #fff;
+}
+.input{
+	height: 45px;
+	border-radius: 0 !important;
+	width: 100%;
+	display: block;
+	padding: 0px 20px;
+	&.focus{}
+	&.err{}
+}
+textarea.input{
+	resize:none;
+	height: 140px;
+	padding: 15px 20px;
+}
+//</INPUT>====================================================================================================
+

@@ -1,0 +1,241 @@
+//====================================================================================================
+
+.header {
+	
+	img.bg{
+		z-index: -1;
+		object-fit: cover;
+		object-position: top;
+	}
+	height: 100vh;
+	background-position: top;
+	
+	&__row {
+		
+	}
+}
+
+
+
+.header-top {
+	z-index: 1;
+	height: 115px;
+	border-bottom: 1px solid #fff;
+
+	.container {
+		// 
+	height: 100%;
+	}
+	
+}
+.header-top-ico{
+	font-family: 'Open Sans';
+	font-size: 30.4px;
+	display: flex;
+	z-index: 20;
+	justify-content:center;align-items: center;
+
+	
+	&__ico{
+		a{color: #fff;}
+		background-color: #11749e;
+		margin: 0px 0px 5px 0px;
+		width: 67px;
+		height: 67px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: rgba($color: #fff, $alpha: 0.8) 12px 8px;
+	}
+}
+.header-top-items{
+	height: 100%;
+	display: flex;
+}
+.header-top-tabs {
+	margin: 0px 0px 0px 13vw;
+	@media (max-width:$md1+px){
+		margin: 0px 0px 0px 5vw;
+	}
+	@media (max-width:$md3+px){
+		
+		display: block;
+	}
+	display: flex;
+	flex: 1 0 auto;
+	justify-content:center;align-items: center;
+	font-size: 20px;
+	line-height: 1.2;
+	&__item {
+		margin: 0px 0px 0px 40px;
+
+		a{
+			color: #fff;
+		}
+		@media (max-width:$md2+px){
+			margin: 0px 0px 0px 25px;
+		}
+		@media (max-width:$md3+px){
+			font-size: 27px;
+			margin: 10px 0px 0px 0px; 
+		}
+		&:first-child{
+			margin: 0; 
+		}
+	}
+}
+.header-top-social {
+	@media (max-width:$md1+px){
+	display: none;
+	}
+	margin: 0px 0px 0px 54px;
+	display: flex;
+	justify-content:center;align-items: center;
+	&__item {
+		margin: 0px 0px 0px 22px;
+		&:first-child{
+			margin: 0; 
+		}
+	}
+}
+
+	.header-bottom {
+		display: flex;
+		justify-content:center;
+		min-height: 100%;
+		position: relative;
+		min-height:calc(100vh - 115px);
+		
+	}
+	
+	.header-bottom-text {
+		margin-top: calc(32vh - 80px);	
+		
+			&__title {
+				line-height: 1.2;
+				//font-size: 152.6px;
+			
+				@include adaptiv-value("font-size",128, 45, 1);
+				
+				font-weight:700;
+				text-align: center;
+				color:#f5f5f5;
+			}
+	
+			&__subtitle {
+				margin: 15px 0px 0px 0px;
+				//font-size: 24.8px;
+				@include adaptiv-value("font-size",24.8, 10, 1);
+				text-align: center;
+				font-weight:500;
+				@include adaptiv-value("letter-spacing",16, 5, 1);
+				text-transform: uppercase;
+				color: #11749e;
+				line-height: 1.5;
+			}
+	}
+	.header-bottom-scroll {
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		position: absolute;
+		bottom: 24vh;
+		left: calc(50% - 32.5px);
+		
+			&__text {
+				width: 100%;
+				text-align: center;
+				font-family: 'Open Sans';
+				font-size: 13px;
+
+			}
+	
+			&__arrow {
+				position: absolute;
+				margin: 25px 0px 0px 0px;
+				width: 65px;
+				height: 65px;
+				border:1px solid #fff;
+				border-radius: 50%;
+				display: flex;
+				justify-content:center;align-items: center;
+				padding: 1px 0px 0px 0px;
+				font-size: 20px;
+				line-height: 1.2;
+				animation:up-down 3s infinite ease;
+				@keyframes up-down {
+					0% {
+						margin: 25px 0px 0px 0px;	
+					}
+					50% {
+						margin: 45px 0px 0px 0px;
+					}
+					
+				}
+			}
+	}
+
+//====================================================================================================
+.icon-menu{
+	display: none;
+}
+
+@media (max-width:$md3+px){
+		.icon-menu{
+
+			display: block;
+			position: absolute;
+			top: 45px;
+			right: 20px;
+
+			width:35px;
+			height: 23px;
+			cursor: pointer;
+			z-index: 10;
+			span{@include anim(0.3s,0s);top: 10.5px;left: 0px;position: absolute;width: 100%;height: 2px;background-color: #fff;
+				&:first-child{top: 0px;}
+				&:last-child{top: auto;bottom: 0px;}
+			}
+			&.active{
+				span{@include scale(0);
+					&:first-child{@include rotate(-45deg);top: 10.5px;}
+					&:last-child{@include rotate(45deg);bottom: 10.5px;}
+				}
+			}
+		}
+
+		.header-menu{
+			&__row {
+				position: absolute;
+				top: 0;
+				width: 100%;
+				height: 115px;
+				border-bottom: 1px solid #fff;
+
+		}
+			position: fixed;
+			top: 0;
+			left: -120%;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			padding: 130px 0px 0px 0px;
+			overflow: auto;
+			background-color: rgba($color: #000000, $alpha: 0.9);
+			
+			@include anim(0.6s, 0s);
+			&.active {
+				left: 0;
+			}
+		}
+	}
+	
+	.header-menu {
+
+		
+}
+
+	
+	
+	

@@ -1,0 +1,350 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* Выставляем основные настройки по-умолчанию для html,body */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeSpeed;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --blue: #0d6efd;
+  --button-hover:#1a59d9;
+  --secondary: #9B51E0;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+}
+
+html, body {
+  font-family: "Source Sans Pro", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 15px;
+}
+
+a {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+a:not(.btn-pirmary):hover {
+  color: var(--blue);
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+.header {
+  background-color: #fff;
+  padding-top: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #263555;
+  -webkit-box-shadow: 0 2px 20px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.header__logo {
+  max-width: 150px;
+}
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .header__nav-list {
+    display: none;
+  }
+}
+.header__nav-item {
+  margin: 0px 0px 0px 20px;
+}
+.header__nav-item a {
+  color: #263555;
+}
+.header .btn-pirmary {
+  padding: 17px;
+  height: 30px;
+  font-weight: 500;
+}
+
+.title {
+  padding: 110px 0px 20px 0px;
+}
+.title__text {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.title__subtext {
+  line-height: 140%;
+}
+
+.slider {
+  background: #F7F8FA;
+  width: 100%;
+}
+.slider__block {
+  width: 100%;
+  height: 100%;
+  padding: 40px 0;
+}
+.slider__wrapper {
+  width: 100%;
+  height: 100%;
+}
+.slider__slide {
+  width: 100%;
+  height: 100%;
+}
+.slider__container {
+  height: 100%;
+}
+.slider__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.slider__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.slider__upcoming {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--secondary);
+  width: 100%;
+  margin-bottom: 50px;
+}
+.slider__title {
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+.slider__text {
+  color: var(--gray-dark);
+  line-height: 140%;
+  font-weight: 600;
+  margin: 30px 0px 0px 0px;
+}
+.slider__button {
+  margin: 40px 0px 0px 0px;
+}
+
+.image-card {
+  width: 280px;
+  -webkit-box-shadow: 0 10px 50px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 50px 0px rgba(0, 0, 0, 0.2);
+}
+.image-card__img {
+  height: 280px;
+}
+.image-card__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-card__text-block {
+  background-color: #fff;
+  padding: 30px;
+}
+.image-card__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.image-card__text {
+  margin-top: 5px;
+  line-height: 110%;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.slider-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 30px 0px 0px 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.slider-date__icon {
+  width: 30px;
+  height: 30px;
+}
+.slider-date__icon svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--secondary);
+}
+.slider-date__text {
+  margin: 0px 0px 0px 20px;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+.swiper-button-prev svg, .swiper-button-next svg {
+  width: 40px;
+  height: 40px;
+}
+
+.btn-pirmary {
+  background-color: var(--blue);
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 40px;
+}
+.btn-pirmary a {
+  color: #fff;
+}
+.btn-pirmary:hover {
+  text-decoration: none;
+  color: white;
+  background-color: var(--button-hover);
+}

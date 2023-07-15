@@ -1,0 +1,52 @@
+
+//====================================================================================================
+.footer {
+   display: block;
+   padding: 48px 0px;
+   background-color: #3c3c3c;
+   position: relative;
+   z-index: 5;
+   min-width: 100%;
+   
+   &__body {
+      text-align: center;
+
+   }
+
+   &__logo {
+      display: inline-block;
+      margin: 0px 0px 40px 0px;
+   }
+
+   &__menu {
+      text-align: center;
+      
+   }
+
+   &__list {
+      @include flexbox();
+      justify-content:center;
+      align-items: center;
+      margin: 0px 0px 15px 0px;
+      li{
+         margin: 0px 15px;
+      }
+   }
+
+   &__link {
+      color: #a4a4a4;
+      font-size: 14px;
+      font-weight: 400;
+   }
+
+   &__text {
+color: #6c6c6c;
+font-family: "Myriad Pro";
+font-size: 14px;
+font-weight: 400;
+   }
+}
+
+
+//====================================================================================================
+

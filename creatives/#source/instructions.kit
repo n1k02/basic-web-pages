@@ -1,0 +1,120 @@
+<!--------------------------------------------- ibg------------------------------>
+<div class="block">
+    <div style="min-height: 300px;" class="block__item ibg">
+        <img src="" alt="">
+    </div>
+    <div style="min-height: 300px;" class="block__item ibg">
+        <img src="" alt="">
+    </div>
+</div>
+
+
+<!------------------------------------------- Tabs ------------------------------>
+<div class="block__tabs tabs">
+    <nav class="block__nav">
+        <div class="block__navitem tab__navitem active">Tab1</div>
+        <div class="block__navitem tab__navitem">Tab2</div>
+    </nav>
+    <div class="block__items">
+        <div class="block__item tab__item active">Content1</div>
+        <div class="block__item tab__item">Content2</div>
+    </div>
+</div>
+
+
+<!---------------------------------------- Spoiler -------------------------->
+<div class="block__spoilers spoilers">
+    <div class="spoilers__item">
+        <div class="spoilers__title spoiler closeall">spoiler1</div>
+        <div class="spoilers__text">content1</div>
+    </div>
+    <div class="spoilers__item">
+        <div class="spoilers__title spoiler closeall">spoiler2</div>
+        <div class="spoilers__text">content2</div>
+    </div>
+</div>
+
+<!-------------------------------------- Replace element ----------------->
+
+<div data-move="header-menu, 0, 767"> - 
+    перенос элемента div data-move="куда", "позиция", "брейкпоинт"
+</div>
+<!-------------------------------------- FORM ------------------------------>
+
+<!-- input Text -->
+<div class="form-block__item">
+    <input  autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="Введи имя" class="input">
+</div>
+
+<!-- CHECKBOX -->
+<div class="block-form__input">
+    <div class="check">
+        Чекбокс 1
+            <input data-error="Ошибка" type="checkbox"  name="namecheckbox_1">
+    </div>
+</div>
+<div class="block-form__input">
+    <div class="check">
+        Чекбокс 2
+            <input data-error="Ошибка" type="checkbox" name="namecheckbox_2">
+    </div>
+</div>
+
+<!-- RADIO -->
+<div class="block-form__input">
+    <div class="radiobuttons">
+            <div class="radiobuttons__item">
+                Вариант 1
+                <input data-error="Ошибка" type="radio" value="1" checked name="nameradio">
+            </div>
+            <div class="radiobuttons__item">
+                Вариант 2
+                <input data-error="Ошибка" type="radio" value="2"  name="nameradio">
+            </div>
+            <div class="radiobuttons__item">
+                Вариант 3
+                <input data-error="Ошибка" type="radio" value="3"  name="nameradio">
+            </div>
+    </div>
+</div>
+
+<!-- options -->
+<div class="form-block__item">
+    <div class='options'>
+        <input value='1' type='hidden' name='form[]' />
+        <div data-value='1' class='option active'>Text #1</div>
+        <div data-value='2' class='option'>Text #2</div>
+    </div>
+</div>
+
+<!-- для работы select нужен скрипт nicescroll добавить в vendors -->
+<!-- select1 -->
+<div class="form-block__item">
+	<select name="form[]" class="form">
+		<option value="1" selected="selected">Пункт №1</option>
+		<option value="2">Пункт №2</option>
+		<option value="3">Пункт №3</option>
+		<option value="4">Пункт №4</option>
+	</select>
+</div>
+<!-- select2 -->
+<div class="form-block__item">
+	<div class='select content-filter__select'>
+		<div class='select-title'>
+			<div class='select-title__arrow'></div>
+			<div class='select-title__value'>Доллар США, USD</div>
+		</div>
+		<div class='select-options'>
+			<div class='select-options-inside'>
+				<div class='select-options__value'>Цена</div>
+				<div class='select-options__value'>Название</div>
+			</div>
+			<input type='hidden' name='form[]'>
+		</div>
+	</div>
+</div>
+
+<!-- btn -->
+<button type="submit" class="form__btn btn">Задать вопрос</button>
+
+<!-------------------------------------- checkbox ---------------------------------------->
